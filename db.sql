@@ -25,7 +25,7 @@ INSERT INTO people VALUES
 	(2,'julia'),
 	(3,'zac');
 
-INSERT INTO expenses(e_pid,e_time,e_value,e_comment) VALUES
+/*INSERT INTO expenses(e_pid,e_time,e_value,e_comment) VALUES
 	(1,'2018-07-07 13:10:12',213.46,'rewe'),
 	(3,'2018-07-12 00:11:13',64.26,'amazon - water filters'),
 	(2,'2018-07-21 14:22:08',39.95,'rewe'),
