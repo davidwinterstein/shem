@@ -1,0 +1,143 @@
+/* ----- TAGS ----- */
+body {
+	overflow-y: scroll;
+	margin: 0;
+	background-color: #eee;
+	color: #25334f;
+	font-family: Ubuntu, Verdana, sans;
+	font-size: 1.3em;
+}
+
+header {
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	margin: 0;
+	border: solid #777;
+	border-width: 0 0 1px;
+	width: 100%;
+	background-color: #fff;
+	padding: 0;
+}
+
+footer {
+	z-index: 9999;
+	position: fixed;
+	bottom: 0;
+	margin: 0;
+	border: solid #777;
+	border-width: 1px 0 0;
+	width: 100%;
+	background-color: #fff;
+	padding: 0;
+	font-size: 0.8em;
+}
+footer a {
+	font-size: 1.5em;
+}
+
+nav {
+	font-size: 1.5em;
+}
+nav ul li {
+	display: inline-block;
+}
+nav ul li a {
+	border-radius: 4px;
+	padding: 5px 20px 10px;
+	background-color: #303949;
+	color: #eee;
+}
+nav ul li a:hover, nav ul li a:active {
+	background-color: #515760;
+	color: #eee
+}
+
+main {
+	margin: auto;
+	margin-top: 130px;
+	margin-bottom: 130px;
+}
+
+h1, h2, h3, h4 {
+	margin: 40px 0 10px;
+	text-decoration: none;
+	text-shadow: 0 0 1px #18253f;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #223047;
+}
+h1 a, h2 a, h3 a, h4 a {
+	color: #223047;
+}
+h1 a:hover, h1 a:active, h2 a:hover, h2 a:active, h3 a:hover, h3 a:active, h4 a:hover, h4 a:active {
+	color: #364660;
+}
+
+a {
+	text-decoration: none;
+	font-variant: small-caps;
+	font-weight: bold;
+	color: #303949;
+}
+a:hover, a:active {
+	color: #515760;
+}
+
+table {
+	margin: auto;
+	border-collapse: collapse;
+	border-style: hidden;
+}
+th {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+th, td {
+	border: 1px dotted #777;
+	padding: 10px;
+}
+
+label {
+	font-weight: bold;
+}
+input {
+	width: 100%;
+}
+input, select, button {
+	font-size: 1em;
+}
+th input {
+	text-align: center;
+}
+
+button {
+	border: 0;
+	border-radius: 4px;
+	padding: 10px;
+	background-color: #303949;
+	color: #eee;
+}
+button:hover, button:active {
+	background-color: #515760;
+	color: #eee
+}
+
+
+
+/* ----- IDS ----- */
+#wrapper {
+	margin: auto;
+	width: 100%;
+	text-align: center;
+}
+
+#menu_main {
+	padding: 0;
+}
+
+
+/* ----- CLASSES ----- */
+.form-group th, .form-group td {
+	border: 0;
+}
