@@ -72,12 +72,30 @@ if ($PAGE == "add") {
 	if (!$res_opt = $db['conn']->query($qry_opt)) {
 		$MAIN = $MSG . '<p style="color: red; font-weight: bold;">Couldn\'t get option value data (MySQL query execution failed).</p>';
 	} else {
+		if (isset($_SERVER['PHP_AUTH_USER']) && !empty($_SERVER['PHP_AUTH_USER'])) {
+			$qry_auth = "SELECT p_id FROM people WHERE p_name = '" . $_SERVER['PHP_AUTH_USER'] . "' LIMIT 1";
+			if ($res_auth = $db['conn']->query($qry_auth)) {
+				while ($value = $res_auth->fetch_array(MYSQLI_NUM)) {
+					$DEFAULTVALUE = $value[0];
+				}
+			} else {
+				$DEFAULTVALUE = 1;
+			}
+		} else {
+			$DEFAULTVALUE = 1;
+		}
+
 		$OPT = '';
 		while ($option = $res_opt->fetch_assoc()) {
-			$OPT .= '<option value="' . $option['p_id'] . '">' . $option['p_name'] . '</option>';
+			if ( $DEFAULTVALUE == $option['p_id'] ) {
+				$OPTSELECT = " selected";
+			} else {
+				$OPTSELECT = "";
+			}
+			$OPT .= '<option value="' . $option['p_id'] . '"' . $OPTSELECT . '>' . $option['p_name'] . '</option>';
 		}
-		$DATEDEFAULT = date('Y-m-d');
-		$TIMEDEFAULT = date('H:i:s');
+		$DEFAULTDATE = date('Y-m-d');
+		$DEFAULTTIME = date('H:i:s');
 		$MAIN = $MSG . '
 <h2>add new expense</h2>
 <form action="?p=add" class="form" id="form-add" method="POST">
@@ -90,7 +108,7 @@ if ($PAGE == "add") {
 		</tr>
 		<tr class="form-group">
 			<td style="text-align: right;"><label for="when">when:</label></td>
-			<td style="text-align: left;"><input type="date" name="date" value="' . $DATEDEFAULT . '" style="width: 50%;"><input type="time" step="1" name="time" value="' . $TIMEDEFAULT . '" class="without-ampm" style="width: 45%;"></td>
+			<td style="text-align: left;"><input type="date" name="date" value="' . $DEFAULTDATE . '" style="width: 50%;"><input type="time" step="1" name="time" value="' . $DEFAULTTIME . '" class="without-ampm" style="width: 45%;"></td>
 		</tr>
 		<tr class="form-group">
 			<td style="text-align: right;"><label for="amount">amount:</label></td>
