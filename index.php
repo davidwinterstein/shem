@@ -116,7 +116,7 @@ if ($PAGE == "add") {
 		</tr>
 		<tr class="form-group">
 			<td style="text-align: right;"><label for="comment">comment:</label></td>
-			<td style="text-align: left;"><input type="text" name="comment" placeholder="ie. \'rewe\' or \'amazon: spices\'" required></td>
+			<td style="text-align: left;"><input type="text" name="comment" placeholder="ie. \'rewe\' or \'amazon - spices\'" required></td>
 		</tr>
 	</table>
 	<div class="form-group">
