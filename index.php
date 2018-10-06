@@ -160,15 +160,19 @@ if ($PAGE == "add") {
 		<th><input type="text" id="comment" onkeyup="filter()" placeholder="filter"></th>
 	</tr>';
 
+	$RESULTS = 0;
+	$SUM = 0.00;
 	$qry_list = "SELECT people.p_name AS who, expenses.e_time AS whengrml, expenses.e_value AS amount, expenses.e_comment AS comment FROM people INNER JOIN expenses ON people.p_id = expenses.e_pid ORDER BY whengrml DESC";
 	if (!$res_list = $db['conn']->query($qry_list)) {
 		$MAIN .= '<tr><td>?</td><td>?</td><td>?</td><td>?</td></tr>';
 	} else {
 		while ($row_list = $res_list->fetch_assoc()) {
 			$MAIN .= '<tr><td>' . $row_list['who'] . '</td><td>' . $row_list['whengrml'] . '</td><td style="text-align: left;">' . $row_list['amount'] . '€</td><td style="text-align: left;">' . $row_list['comment'] . '</td></tr>';
+			$RESULTS++;
+			$SUM += $row_list['amount'];
 		}
 	}
-	$MAIN .= '</table>';
+	$MAIN .= '</table><p><strong id="results">' . $RESULTS . '</strong> results | sum: <strong id="sum">' . $SUM . '</strong>€</p>';
 }
 
 
