@@ -19,6 +19,6 @@ On the "add" page you can add new entries:
 How to use:
 1. Create a database on your database server.
 1. Download the repository contents to your web server.
-1. Provide database access parameters in `config.php`.
-1. Edit `db.sql` to fit your needs (you'll just want to change `john`, `julia` and `zac` to the names you need) and import it into the database.
+1. Provide database access parameters in [`config.php`](config.php).
+1. Edit [`db.sql`](db.sql) to fit your needs (you'll just want to change `john`, `julia` and `zac` to the names you need) and import it into the database.
 1. Recommended: Setup a `.htaccess` password protection. The HTTP auth user name is even preselected on the add page if it exists in the database.
