@@ -1,6 +1,6 @@
 # budget calc
 
-**[budget calc](github.com/davidwinterstein/budget-calc)** is a simple little tool to help you keep track of the expenses of all the members in your household.  Ideally, you set this up on your public webserver (and add a `.htaccess` password protection), so you can add expenses directly from your phone just after paying.
+**[budget calc](https://github.com/davidwinterstein/budget-calc)** is a simple little tool to help you keep track of the expenses of all the members in your household.  Ideally, you set this up on your public webserver (and add a `.htaccess` password protection), so you can add expenses directly from your phone just after paying.
 
 ---
 
