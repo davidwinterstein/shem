@@ -205,10 +205,10 @@ $HEADER = '
 		<meta name="viewport" content="width=device-width">
 		<meta name="viewport" content="initial-scale=1.0">
 		<meta charset="UTF-8" />
-		<meta name="keywords" content="budget,calculation" />
-		<meta name="description" content="overview and budget summary calculation for shared households" />
+		<meta name="keywords" content="expense,management,summary,calculation" />
+		<meta name="description" content="shared household expense management - expense overview and summary calculation" />
 		<meta name="author" content="David Winterstein" />
-		<title>budget calc</title>
+		<title>shem</title>
 		<script src="inc/js/filter.js"></script>
 	</head>
 	<body>
