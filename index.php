@@ -180,7 +180,7 @@ if ($PAGE == "add") {
 
 	$RESULTS = 0;
 	$SUM = 0.00;
-	$qry_list = "SELECT people.p_name AS who, expenses.e_time AS whengrml, expenses.e_value AS amount, expenses.e_comment AS comment FROM people INNER JOIN expenses ON people.p_id = expenses.e_pid ORDER BY whengrml DESC";
+	$qry_list = "SELECT people.p_name AS who, expenses.e_time AS whengrml, expenses.e_value AS amount, expenses.e_comment AS comment FROM people INNER JOIN expenses ON people.p_id = expenses.e_pid ORDER BY whengrml DESC, expenses.e_id DESC";
 	if (!$res_list = $db['conn']->query($qry_list)) {
 		$MAIN .= '<tr><td>?</td><td>?</td><td>?</td><td>?</td></tr>';
 	} else {
