@@ -43,6 +43,7 @@ nav ul li {
 	display: inline-block;
 }
 nav ul li a {
+	margin-left: 5px;
 	border-radius: 4px;
 	padding: 5px 20px 10px;
 	background-color: #303949;
@@ -112,6 +113,7 @@ th input {
 }
 
 button {
+	margin-top: 20px;
 	border: 0;
 	border-radius: 4px;
 	padding: 10px;
@@ -140,4 +142,7 @@ button:hover, button:active {
 /* ----- CLASSES ----- */
 .form-group th, .form-group td {
 	border: 0;
+}
+tr.topboing>td {
+	padding-top: 30px;
 }
